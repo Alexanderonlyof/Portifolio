@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio Criativo</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            padding: 40px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #eee;
+            object-fit: cover;
+            border: 4px solid #4e54c8;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4e54c8;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #222;
+            margin-top: 8px;
+        }
+        .section {
+            margin-top: 40px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: #4e54c8;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .project-card {
+            background: #f5f7fa;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.03);
+        }
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #222;
+        }
+        .project-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 8px;
+        }
+        .contact {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact a {
+            color: #4e54c8;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+        /* Decoração */
+        .decor {
+            position: absolute;
+            pointer-events: none;
+        }
+        .decor-top-right {
+            top: 0;
+            right: 0;
+        }
+        .decor-top-left {
+            top: 0;
+            left: 0;
+        }
+        .decor-center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* ETs girando */
+        .et-rotate {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            animation: rotate 10s linear infinite;
+        }
+        .et-top-left {
+            top: 10px;
+            left: 10px;
+        }
+        .et-top-right {
+            top: 10px;
+            right: 10px;
+        }
+        .et-bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+        .et-bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        /* Cavalo rodando */
+        .horse-rotate {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            animation: rotate 20s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Decoração topo direita -->
+    <svg class="decor decor-top-right" width="120" height="120" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="55" fill="url(#grad1)" />
+        <defs>
+            <linearGradient id="grad1" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffb347"/>
+                <stop offset="1" stop-color="#4e54c8"/>
+            </linearGradient>
+        </defs>
+    </svg>
+    <!-- Decoração topo esquerda -->
+    <svg class="decor decor-top-left" width="80" height="80" viewBox="0 0 80 80">
+        <rect x="10" y="10" width="60" height="60" rx="20" fill="#8f94fb" opacity="0.7"/>
+    </svg>
+    <!-- Decoração centro -->
+    <svg class="decor decor-center" width="60" height="60" viewBox="0 0 60 60">
+        <polygon points="30,5 55,55 5,55" fill="#ffcc80" opacity="0.7"/>
+    </svg>
+    <!-- ETs girando nos cantos -->
+    <div class="et-rotate et-top-left">
+        <svg width="60" height="60" viewBox="0 0 60 60">
+            <ellipse cx="30" cy="35" rx="18" ry="22" fill="#7fffd4"/>
+            <ellipse cx="22" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="38" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="30" cy="48" rx="6" ry="3" fill="#fff"/>
+        </svg>
+    </div>
+    <div class="et-rotate et-top-right">
+        <svg width="60" height="60" viewBox="0 0 60 60">
+            <ellipse cx="30" cy="35" rx="18" ry="22" fill="#ffb347"/>
+            <ellipse cx="22" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="38" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="30" cy="48" rx="6" ry="3" fill="#fff"/>
+        </svg>
+    </div>
+    <div class="et-rotate et-bottom-left">
+        <svg width="60" height="60" viewBox="0 0 60 60">
+            <ellipse cx="30" cy="35" rx="18" ry="22" fill="#8f94fb"/>
+            <ellipse cx="22" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="38" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="30" cy="48" rx="6" ry="3" fill="#fff"/>
+        </svg>
+    </div>
+    <div class="et-rotate et-bottom-right">
+        <svg width="60" height="60" viewBox="0 0 60 60">
+            <ellipse cx="30" cy="35" rx="18" ry="22" fill="#ff69b4"/>
+            <ellipse cx="22" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="38" cy="35" rx="4" ry="7" fill="#222"/>
+            <ellipse cx="30" cy="48" rx="6" ry="3" fill="#fff"/>
+        </svg>
+    </div>
+    <div class="container">
+        <div class="header">
+            <img src="data:image/jpeg;base64,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" alt="Avatar" class="avatar">
+            <div>
+                <div class="title">Alexander</div>
+                <div class="subtitle">Desenvolvedor Front-End | UI Designer</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Projetos</div>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-title">Projeto 1</div>
+                    <div class="project-desc">Descrição breve do projeto 1.</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Projeto 2</div>
+                    <div class="project-desc">Descrição breve do projeto 2.</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-title">Projeto 3</div>
+                    <div class="project-desc">Descrição breve do projeto 3.</div>
+                </div>
+            </div>
+        </div>
+        <div class="contact section">
+            <div class="section-title">Contato</div>
+            <a href="mailto:alexander@gmail.com">Email</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="https://github.com">GitHub</a>
+        </div>
+    </div>
+    <!-- Cavalo rodando no canto inferior esquerdo -->
+    <div class="horse-rotate">
+        <!-- Exemplo de SVG do cavalo, substitua pelo SVG real -->
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <ellipse cx="50" cy="70" rx="40" ry="20" fill="#ffb347"/>
+            <path d="M30,70 Q50,10 70,70" stroke="#4e54c8" stroke-width="8" fill="none"/>
+            <circle cx="50" cy="40" r="18" fill="#fff"/>
+            <circle cx="50" cy="40" r="12" fill="#4e54c8"/>
+        </svg>
+    </div>
+</body>
+</html>
