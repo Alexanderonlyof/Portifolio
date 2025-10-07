@@ -223,6 +223,8 @@
             <a href="mailto:alexander@gmail.com">Email</a>
             <a href="https://linkedin.com">LinkedIn</a>
             <a href="https://github.com">GitHub</a>
+            <!-- Botão Sobre Mim -->
+            <button id="sobreBtn" style="margin-top:24px;padding:12px 28px;background:#8f94fb;color:#fff;border:none;border-radius:8px;font-size:1rem;cursor:pointer;transition:background 0.2s;">Sobre Mim</button>
             <!-- Botão de Feedback -->
             <button id="feedbackBtn" style="margin-top:24px;padding:12px 28px;background:#4e54c8;color:#fff;border:none;border-radius:8px;font-size:1rem;cursor:pointer;transition:background 0.2s;">Enviar Feedback</button>
         </div>
@@ -238,9 +240,13 @@
         </svg>
     </div>
     <script>
-        // Ao clicar, redireciona para feedback.html
+        // Botão Feedback
         document.getElementById('feedbackBtn').onclick = function() {
             window.location.href = 'feedback.html';
+        };
+        // Botão Sobre Mim
+        document.getElementById('sobreBtn').onclick = function() {
+            window.location.href = 'sobremim.html';
         };
     </script>
 </body>
